@@ -20,9 +20,9 @@ pipeline {
                     def serverUrl = "http://13.233.140.100:8081/"
                     def username = "sanjay"
                     def password = "sanjay"
-                    def jarFileName = "simple-parcel-service-app-1.0-SNAPSHOT.jar"
+                    def warFileName = "hello-world-war-1.0.0.war"
 
-                    sh "curl -v --user ${username}:${password} --upload-file target/${jarFileName} ${serverUrl}/manager/text/deploy?path=/${jarFileName}"
+                    sh "curl -v --user ${username}:${password} --upload-file target/${warFileName} ${serverUrl}/manager/text/deploy?path=/${warFileName}"
                 }
             }
         }
