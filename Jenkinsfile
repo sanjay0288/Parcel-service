@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                sh 'rm -rf hello-world-war'
                 sh 'git clone -b feature-1 https://github.com/sanjay0288/Parcel-service.git'
             }
         }
