@@ -19,9 +19,9 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 script {
-                    def serverUrl = "<Your_Tomcat_Manager_URL>"
-                    def username = "<Your_Tomcat_Username>"
-                    def password = "<Your_Tomcat_Password>"
+                    def serverUrl = "http://13.233.140.100:8081/"
+                    def username = "sanjay"
+                    def password = "sanjay"
                     def warFileName = "<Your_WAR_File_Name>"
 
                     sh "curl -v --user ${username}:${password} --upload-file target/${warFileName} ${serverUrl}/manager/text/deploy?path=/${warFileName}"
