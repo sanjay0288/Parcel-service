@@ -22,7 +22,7 @@ pipeline {
                     def password = "sanj"
                     def warFileName = "sample.war"
 
-                    sh "curl -v --user ${username}:${password} --upload-file target/${warFileName} ${serverUrl}/manager/text/deploy?path=/${warFileName}"
+                    sh "curl -v --user ${username}:${password} --upload-file ${warFileName} ${serverUrl}/manager/text/deploy?path=/${warFileName}"
                 }
             }
         }
