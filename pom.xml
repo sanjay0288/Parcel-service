@@ -17,12 +17,16 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+         <exclusion>
             <version>${spring.boot.version}</version>
+         </exclusion>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+         <exclusion>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring.boot.version}</version>
+         </exclusion>
         </dependency>
     </dependencies>
 
