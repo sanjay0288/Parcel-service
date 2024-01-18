@@ -17,19 +17,22 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+         <exclusion>
             <version>${spring.boot.version}</version>
+         </exclusion>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+         <exclusion>
             <artifactId>spring-boot-starter-web</artifactId>
-                 <scope>provided</scope>
             <version>${spring.boot.version}</version>
+         </exclusion>
         </dependency>
     </dependencies>
 
     <build>
          <defaultGoal>spring-boot:run</defaultGoal>
-         <finalname>${project.artifactId}</finalname>
+         <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
