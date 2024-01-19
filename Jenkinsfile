@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-		sh 'rm -rf bus_booking'
+		
                 sh 'git clone https://github.com/sanjay0288/Parcel-service.git'
             }
         }
