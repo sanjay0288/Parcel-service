@@ -38,12 +38,13 @@ pipeline {
                 }
             }
         }
-	post {
-        success {
-            echo "Build, Run, and Deployment to Tomcat successful!"
-        }
-        failure {
-            echo "Build, Run, and Deployment to Tomcat failed!"
-        }
-	}
+	    post {
+            success {
+                echo "Build, Run, and Deployment to Tomcat successful!"
+            }
+            failure {
+                echo "Build, Run, and Deployment to Tomcat failed!"
+            }
+	    }   
+    }
 }
