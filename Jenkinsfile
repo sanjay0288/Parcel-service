@@ -33,7 +33,7 @@ pipeline {
                     def password = "sanj"
                     def warFileName = "simple-parcel-service-app-1.0-SNAPSHOT.jar"
                     def warFilePath = "/home/slave1/workspace/parcel_service_feature-1/target/simple-parcel-service-app-1.0-SNAPSHOT.jar"
-
+		    sh 'ssh root@172.31.15.207'
 		    sh "scp warFilePath root@172.31.15.207:/opt/apache-tomcat-8.5.98/webapps/"
                 }
             }
