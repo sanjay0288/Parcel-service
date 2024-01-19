@@ -38,6 +38,7 @@ pipeline {
                 }
             }
         }
+    }
 	    post {
             success {
                 echo "Build, Run, and Deployment to Tomcat successful!"
@@ -45,6 +46,6 @@ pipeline {
             failure {
                 echo "Build, Run, and Deployment to Tomcat failed!"
             }
-	    }   
+  
     }
 }
