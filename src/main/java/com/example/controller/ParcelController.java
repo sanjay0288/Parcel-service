@@ -1,5 +1,7 @@
 package com.example.controller;
 
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/")
-public class ParcelController {
+public class ParcelController extends SpringBootServletInitializer {
 
     @GetMapping
     public String index() {
@@ -34,5 +36,9 @@ public class ParcelController {
         model.addAttribute("parcelContent", parcelContent);
         return "confirmation";
     }
-}
 
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(SimpleParcelServiceApp.class);
+    }
+}
