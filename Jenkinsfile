@@ -7,7 +7,7 @@ pipeline {
         stage('checkout') {
             steps {
                 sh 'rm -rf Parcel-service'
-                sh 'git clone https://github.com/sanjay0288/Parcel-service.git'
+                sh 'git clone -b feature-2 https://github.com/sanjay0288/Parcel-service.git'
             }
         }
 
