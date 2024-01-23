@@ -1,18 +1,11 @@
 package com.example;
 
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public class SimpleParcelServiceAppWar extends SpringBootServletInitializer {
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(SimpleParcelServiceApp.class);
-    }
-
+@SpringBootApplication
+public class SimpleParcelServiceApp {
     public static void main(String[] args) {
-        new SimpleParcelServiceAppWar()
-                .configure(new SpringApplicationBuilder(SimpleParcelServiceApp.class))
-                .run(args);
+        SpringApplication.run(SimpleParcelServiceApp.class, args);
     }
 }
