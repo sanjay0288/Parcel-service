@@ -1,5 +1,6 @@
 package com.example.controller;
 
+import com.example.SimpleParcelServiceApp;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.stereotype.Controller;
