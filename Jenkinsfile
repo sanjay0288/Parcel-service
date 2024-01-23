@@ -36,23 +36,12 @@ pipeline {
                 }
             }
         }
-
-        stage('Run JAR Locally') {
-            steps {
-                script {
-                    // Run the JAR file using java -jar
-                    sh "nohup timeout 10s java -jar target/simple-parcel-service-app-1.0-SNAPSHOT.jar > output.log 2>&1 &"
-                    // Sleep for a while to allow the application to start
-                    sleep 10
-                }
-            }
-        }
         
         stage('deploy') {
             steps {
                 //sh 'ssh root@172.31.15.207'
                 //sh "scp /home/slave1/workspace/parcel_service_feature-2/target/simple-parcel-service-app-1.0-SNAPSHOT.jar root@172.31.15.207:/opt/apache-tomcat-8.5.98/webapps"
-                sh 'curl -v --user sanj:sanj --upload-file /home/slave1/workspace/deployingtomcat/target/simple-parcel-service-app-1.0-SNAPSHOT.jar "http://13.233.9.29:8081/manager/text/deploy?path=/simple-parcel-service-app-1.0-SNAPSHOT"'
+                sh 'curl -v --user sanj:sanj --upload-file /home/slave1/workspace/Parcel-service/target/simple-parcel-service-app-1.0-SNAPSHOT.war "http://13.233.9.29:8081/manager/text/deploy?path=/simple-parcel-service-app-1.0-SNAPSHOT"'
             }
         }
         
