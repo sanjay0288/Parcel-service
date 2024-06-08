@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     def warFileName = "target/Parcel-service.war"
-                    def tomcatDir = "/opt/apache-tomcat-10.1.24
+                    def tomcatDir = "/opt/apache-tomcat-10.1.24"
 
                     sh "cp ${warFileName} ${tomcatDir}/webapps/"
                     sh "${tomcatDir}/bin/shutdown.sh"
