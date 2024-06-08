@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                sh 'rm -rf hello-world-war'
+                sh 'rm -rf Parcel-service'
                 sh 'git clone -b feature-1 https://github.com/sanjay0288/Parcel-service.git'
             }
         }
@@ -12,10 +12,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    def mvnHome = tool 'Maven'
-                    def mvnCMD = "${mvnHome}/bin/mvn"
 
-                    sh "${mvnCMD} clean install"
+                    sh "mvn clean install"
                 }
             }
         }
