@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy to Tomcat') {
             steps {
                 script {
-                    def warFileName = "target/Parcel-service.war"
+                    def warFileName = "target/simple-parcel-service-app-1.0-SNAPSHOT.jar"
                     def tomcatDir = "/opt/apache-tomcat-10.1.24"
 
                     sh "cp ${warFileName} ${tomcatDir}/webapps/"
