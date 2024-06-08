@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+          
 
                     sh "mvn clean install"
                 }
@@ -28,7 +29,8 @@ pipeline {
                     sh "${tomcatDir}/bin/shutdown.sh"
                     sleep 5 
                     sh "${tomcatDir}/bin/startup.sh"
-                }
+                    }
+                
             }
         }
     }
